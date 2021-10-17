@@ -95,3 +95,6 @@ class Numbers {
 }
 ```
 
+In short, static means that a variable or a method 
+belongs to the class itself instead of belonging to a 
+particular object of the class.

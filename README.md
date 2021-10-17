@@ -28,3 +28,27 @@ unwanted changes from occurring.
 The instance variables of a class is often set to be 
 private, but we can still edit & read them by creating 
 getter and setter method.
+
+### Constructor Parameter Naming Convention:
+Oftentimes, we may see constructors have parameters
+with the same name as the instance variable.
+```java
+public Person(String name){
+    this.name = name;
+}
+```
+This can be read as - "set `this` `Person`‘s instance 
+variable name equal to the variable passed into the 
+constructor."
+
+Sometimes other people may use different name for the 
+argument, to prevent confusion.
+
+```java
+public Person(String inputName){
+    this.name = inputName;
+}
+```
+
+Like in JavaScript, `this` keyword is a reference 
+to the current object.

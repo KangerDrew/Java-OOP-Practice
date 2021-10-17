@@ -42,13 +42,56 @@ variable name equal to the variable passed into the
 constructor."
 
 Sometimes other people may use different name for the 
-argument, to prevent confusion.
-
+argument, to prevent confusion. 
 ```java
 public Person(String inputName){
     this.name = inputName;
 }
 ```
+Both are valid approach for typing up the constructors
+in Java.
 
 Like in JavaScript, `this` keyword is a reference 
 to the current object.
+
+### Static vs Non-Static:
+If a method is static, it means that it can be called
+and used without having to create an object of the class.
+
+```java
+class Numbers {
+  public static void main(String[] args) {
+    // Call method using the Class name, the dot operator, the method name, and arguments
+    int smallerNumber = Math.min(3, 10);
+    System.out.println(smallerNumber); // Prints: 3
+  }
+}
+```
+For non-static method, an object needs to be created first
+in order for that method to be invoked:
+
+```java
+class Numbers {
+  int firstNumber;
+  int secondNumber;
+ 
+  public Numbers (int num1, int num2) {
+    firstNumber = num1;
+    secondNumber = num2;
+  }
+ 
+  // non-static method
+  public int returnSum() {
+    return firstNumber + secondNumber;
+  }
+ 
+  public static void main(String[] args) {
+    // Create an object
+    Numbers myNumbers = new Numbers(2, 5);
+    // Call a non-static method on object
+    int sum = myNumbers.returnSum();
+    System.out.println(sum); // Prints: 7
+  }
+}
+```
+

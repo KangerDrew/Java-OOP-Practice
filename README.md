@@ -1,6 +1,8 @@
 # Review of OOP using Java
 
-The purpose of this repository is to review and practice key concepts that are crucial in understanding object oriented programming. These concepts include:
+The purpose of this repository is to review and 
+practice key concepts that are crucial in understanding
+object-oriented programming. These concepts include:
 
 - Encapsulation
 - Accessor methods
@@ -9,12 +11,20 @@ The purpose of this repository is to review and practice key concepts that are c
 - Inheritance
 - Polymorphism
 
-These concepts will be explored by creating few simple projects.
+These concepts will be explored by creating few
+simple projects.
 
 ## Additional Notes
 
 ### Private vs Public:
-In Java, these keywords in front of variables, classes, etc. determine which parts of your code have access to other parts of your code.
-Doing so helps us "encapsulate" our code into nice little bundles of logic, and helps the programmer segment our code and potentially prevent unwanted changes from occuring.
+In Java, these keywords in front of variables, classes,
+etc. determine which parts of your code have access to
+other parts of your code. Doing so helps us "encapsulate" 
+our code into nice little bundles of logic, and helps
+the programmer segment our code and potentially prevent
+unwanted changes from occurring.
 
-
+### Accessor (getter) & Mutator (setter):
+The instance variables of a class is often set to be 
+private, but we can still edit & read them by creating 
+getter and setter method.

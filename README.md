@@ -9,3 +9,9 @@ The purpose of this repository is to review and practice key concepts that are c
 - Inheritance
 - Polymorphism
 
+These concepts will be explored by creating few simple projects.
+
+### ATM
+
+### Calculator
+

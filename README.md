@@ -11,7 +11,10 @@ The purpose of this repository is to review and practice key concepts that are c
 
 These concepts will be explored by creating few simple projects.
 
-### ATM
+## Additional Notes
 
-### Calculator
+### Private vs Public:
+In Java, these keywords in front of variables, classes, etc. determine which parts of your code have access to other parts of your code.
+Doing so helps us "encapsulate" our code into nice little bundles of logic, and helps the programmer segment our code and potentially prevent unwanted changes from occuring.
+
 

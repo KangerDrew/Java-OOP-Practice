@@ -99,6 +99,18 @@ In short, static means that a variable or a method
 belongs to the class itself instead of belonging to a 
 particular object of the class.
 
-### Composition:
+### Composition vs Inheritance:
 
-This is a more preferred 
+There are few ways to achieve polymorphic behavior
+in Java. Though **inheritance** can be good because it 
+promotes re-usability and reduce code redundancy, most
+projects will often choose to go with **composition**
+due to following issues that inheritance has:
+
+- Inherited functions work slower than normal function 
+as there is indirection
+- Often, data members in the parent class are left 
+unused which may lead to memory wastage
+- Inheritance increases the coupling between parent
+class and child class. Any change in parent class will
+affect all the child classes.

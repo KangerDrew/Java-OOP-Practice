@@ -110,9 +110,9 @@ The following list highlights some issues with
 inheritance in OOP:
 
 - Inherited functions work slower than normal function 
-as there is indirection
+as there is indirection.
 - Often, data members in the parent class are left 
-unused which may lead to memory wastage
+unused which may lead to memory wastage.
 - Inheritance increases the coupling between parent
 class and child class. Any change in parent class will
 affect all the child classes.
@@ -121,7 +121,7 @@ _In inheritance, a "child class" is a "parent class"_
 
 - An orange is a fruit
 - A dog is an animal
-- An airplane is a vehicle
+- An aircraft is a vehicle
 
 ```java
 class Vehicle {
@@ -136,7 +136,7 @@ class Vehicle {
 
 }
 
-public class Airplane extends Vehicle {
+public class Aircraft extends Vehicle {
 
     String passengerCount;
     String pilotName;
@@ -148,11 +148,55 @@ public class Airplane extends Vehicle {
     }
     public static void main(String... inheritanceExample) {
         System.out.println(new Vehicle().speed);
-        System.out.println(new Airplane().speed);
-        new Airplane().move();
+        System.out.println(new Aircraft().speed);
+        new Aircraft().move();
     }
 
 }
 ``` 
 
 ### Composition:
+In composition, "has-a" relationship is more 
+semantically correct than "is-a" relationship between
+classes. This gives composition some advantages over 
+inheritance:
+
+- More flexible, since making changes to the 
+implementation of one of the class will not affect the
+other class like the way it does with inheritance 
+(parent & child)
+- Does not break encapsulation like inheritance does.
+- No conflict between methods/properties names
+
+_In composition, a "class" has a "class"_
+
+- A person has a heart (heart is part of the person)
+- An aircraft has a jet engine (jet engine is part of the aircraft)
+- A house has a living room (a living room is part of a house)
+
+```java
+public class CompositionExample {
+
+    public static void main(String... houseComposition) {
+        new House(new Bedroom(), new LivingRoom());
+        // The house now is composed with a Bedroom and a LivingRoom
+    }
+
+    static class House {
+
+        Bedroom bedroom;
+        LivingRoom livingRoom;
+
+        House(Bedroom bedroom, LivingRoom livingRoom) {
+            this.bedroom = bedroom;
+            this.livingRoom = livingRoom;
+        }
+
+    }
+
+    static class Bedroom { }
+
+    static class LivingRoom { }
+
+}
+```

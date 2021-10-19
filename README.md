@@ -200,3 +200,8 @@ public class CompositionExample {
 
 }
 ```
+
+### Abstraction & Interfaces:
+
+In Java OOP, some classes, methods, and variables may 
+have 
